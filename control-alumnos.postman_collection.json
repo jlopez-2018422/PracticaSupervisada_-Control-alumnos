@@ -1,0 +1,417 @@
+{
+	"info": {
+		"_postman_id": "34fed14d-c3b2-4bee-a6a8-0912556deaca",
+		"name": "control-alumnos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "postUsuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Jefrey Lopez\",\r\n    \"email\": \"jefreyLopez@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"role\": \"ROLE_MAESTRO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/users/agregar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"agregar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "putUsuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"role\": \"ROLE_ALUMNO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/users/editar/63f5bd3d29d077ef3a2c843f",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"editar",
+								"63f5bd3d29d077ef3a2c843f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUsuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/users/eliminar/63f5cae033e6509e1dfdae68",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"eliminar",
+								"63f5cae033e6509e1dfdae68"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUsuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/users/mostrar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"mostrar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cursos",
+			"item": [
+				{
+					"name": "postCurso",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2M2Y1ZjAzMWJlNDg2ZDhmYjQwYWZjZGQiLCJpYXQiOjE2NzcwNjY1NDQsImV4cCI6MTY3NzA4MDk0NH0.zCi_WKDVpIX7hw9nbUZ5_fMCSdaaWQI_EDiRWSz91gw",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Practica Supervisada\",\r\n    \"descripcion\": \"Curso de practica Supervisada\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/cursos/agregar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cursos",
+								"agregar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCurso",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/cursos/mostrar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cursos",
+								"mostrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "putCurso",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Lengua y literatura\",\r\n    \"descripcion\": \"Curso de lengua y literatura\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/cursos/editar/63f5b761839455ecbe8ac8c9",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cursos",
+								"editar",
+								"63f5b761839455ecbe8ac8c9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCurso",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2M2Y1ZjAzMWJlNDg2ZDhmYjQwYWZjZGQiLCJpYXQiOjE2NzcwNjY1NDQsImV4cCI6MTY3NzA4MDk0NH0.zCi_WKDVpIX7hw9nbUZ5_fMCSdaaWQI_EDiRWSz91gw",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/api/cursos/eliminar/63f5b771839455ecbe8ac8cb",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cursos",
+								"eliminar",
+								"63f5b771839455ecbe8ac8cb"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"jefreyLopez@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registro",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Mario Gomez\",\r\n    \"email\": \"marioGomez@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/users/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Asignaciones",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2M2Y1YmQzZDI5ZDA3N2VmM2EyYzg0M2YiLCJpYXQiOjE2NzcwNjIyNDAsImV4cCI6MTY3NzA3NjY0MH0.Sxh9o57VSUCXFjyWOqh1V27yvwcSwjU_xnk33jsUYZo",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/cursos/asignar/63f5b771839455ecbe8ac8cb",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cursos",
+						"asignar",
+						"63f5b771839455ecbe8ac8cb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtenerMisCursos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/users/myCourses",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"myCourses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminarMiCuenta",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2M2Y1ZmQwM2MxN2JmZGEwMjk3MTQ2NDQiLCJpYXQiOjE2NzcwNjU0ODIsImV4cCI6MTY3NzA3OTg4Mn0.TQXPrmEj4Il2JCQwHiC9NAF325I0q_COBBKd3Z-siqU",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/users/eliminarMiUsuario/63f5bd3d29d077ef3a2c843f",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"eliminarMiUsuario",
+						"63f5bd3d29d077ef3a2c843f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editarMiCuenta",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2M2Y1ZmZmYTlhYjZjNjE3ZWE5NThkOWIiLCJpYXQiOjE2NzcwNjYyNDQsImV4cCI6MTY3NzA4MDY0NH0.838OOuNIM9VLQweBEDD0oWJZgZyyecevV_poX_v5zBQ",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Pepe Herrera\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/users/editarMiUsuario/63f5ca609c5b1141734d746b",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"editarMiUsuario",
+						"63f5ca609c5b1141734d746b"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
